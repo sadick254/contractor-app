@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_20_174859) do
+ActiveRecord::Schema.define(version: 2022_05_20_175611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2022_05_20_174859) do
     t.bigint "contractor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status", default: 0, comment: "0: pending, 1: accepted, 2: approved, 3: rejected"
     t.index ["contractor_id"], name: "index_payment_requests_on_contractor_id"
   end
 
