@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Contractor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should not raise an error when getting payment_requests" do
+    expect{FactoryBot.build(:contractor).payment_requests}.not_to raise_error
+  end
 end
