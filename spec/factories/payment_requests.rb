@@ -3,6 +3,6 @@ FactoryBot.define do
     amount { "" }
     currency { "MyString" }
     description { "MyText" }
-    contractor { nil }
+    contractor
   end
 end
