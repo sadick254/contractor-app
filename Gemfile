@@ -59,3 +59,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "bunny", "~> 2.19"
+gem 'sneakers'

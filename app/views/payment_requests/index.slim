@@ -1,4 +1,5 @@
-h1 Payment Requests
+h1 Contractor App
+h3 Payment Requests
 
 = link_to 'Make a payment request', new_payment_request_path
 br
@@ -17,7 +18,7 @@ br
         td.description = payment_request[:description]
         td.amount = payment_request[:amount]
         td.currency = payment_request[:currency]
-        td.status = payment_request[:status]
+        td class=(payment_request['status']) = payment_request['status']
 - else
   p
     | No payment request found.  Please make a payment request.

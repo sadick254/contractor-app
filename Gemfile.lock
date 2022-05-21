@@ -197,7 +197,10 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    serverengine (2.0.7)
+      sigdump (~> 0.2.2)
     set (1.0.2)
+    sigdump (0.2.4)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -205,6 +208,12 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 5.0)
+    sneakers (2.11.0)
+      bunny (~> 2.12)
+      concurrent-ruby (~> 1.0)
+      rake
+      serverengine (~> 2.0.5)
+      thor
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -271,6 +280,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   slim-rails
+  sneakers
   spring
   spring-watcher-listen (~> 2.0.0)
   super_diff

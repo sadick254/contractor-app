@@ -2,7 +2,7 @@ class PaymentRequestsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @payment_requests = PaymentRequest.all
+    @payment_requests = PaymentRequest.order('created_at').all
 
     respond_to do |format|
       format.html
@@ -24,6 +24,7 @@ class PaymentRequestsController < ApplicationController
         format.html { redirect_to action: index }
         format.json { render json: @payment_request }
       end
+      Publisher.publish('payment.request', @payment_request)
     else
       render json: @payment_request.errors, status: :unprocessable_entity
     end
