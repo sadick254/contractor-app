@@ -1,0 +1,24 @@
+h1 Payment Requests
+
+= link_to 'Make a payment request', new_payment_request_path
+br
+br
+- unless @payment_requests.empty?
+  table
+    thead
+      tr
+        th Description
+        th Amount
+        th Currency
+        th Status
+
+    - @payment_requests.each do |payment_request|
+      tr
+        td.description = payment_request[:description]
+        td.amount = payment_request[:amount]
+        td.currency = payment_request[:currency]
+        td.status = payment_request[:status]
+- else
+  p
+    | No payment request found.  Please make a payment request.
+           Thank you!

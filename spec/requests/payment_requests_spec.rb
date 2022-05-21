@@ -5,7 +5,7 @@ RSpec.describe "PaymentRequests", type: :request do
     it'should return all payment requests' do
       FactoryBot.create(:payment_request)
 
-      get "/payment_requests"
+      get "/payment_requests.json"
       payment_request = PaymentRequest.first
       json_response = JSON.parse(response.body)
 

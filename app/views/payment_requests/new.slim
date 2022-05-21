@@ -1,0 +1,10 @@
+h3 Create a new payment request
+
+= form_with(model:@payment_request) do |f|
+  = f.label :description
+  = f.text_field :description
+  = f.label :amount
+  = f.text_field :amount
+  = f.label :currency
+  = f.text_field :currency
+  = f.submit 'Request payment'
